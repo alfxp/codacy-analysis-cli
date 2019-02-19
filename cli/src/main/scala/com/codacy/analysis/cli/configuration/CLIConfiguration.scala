@@ -194,6 +194,9 @@ object CLIConfiguration {
     } {
       _.getRemoteConfiguration
     }
+    println("")
+    println(remoteProjectConfiguration.right.get)
+    println("")
     val analysisConfiguration =
       Analysis(projectDirectory, analyse, localConfiguration, remoteProjectConfiguration)
     val uploadConfiguration = Upload(commitUuid, analyse.uploadValue)
